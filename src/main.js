@@ -16,15 +16,20 @@ new Vue({
 }).$mount('#app')
 
 const $ = JQuery
+
 $(document).ready(function () {
-  const $root = $('html, body');
-
   // Smooth navigation links
-  $('.navigation-link a[href^="#"]').click(function () {
-    $root.animate({
-      scrollTop: $($.attr(this, 'href')).offset().top - 45
+  $("a").click(function () {
+    $(document.scrollingElement || "body").animate({
+      scrollTop: $($(this).attr("href")).offset().top
     }, 800);
-
     return false;
   });
+  // $('a[href^="#"]').click(function () {
+  //   $('html, body').animate({
+  //     scrollTop: $($(this).attr('href')).offset().top
+  //   }, 800);
+
+  //   return false;
+  // });
 });
