@@ -1,0 +1,101 @@
+[{
+        "country": {
+            "id": "FR",
+            "name": "France"
+        },
+        "city": {
+            "name": "Paris",
+            "latitude": 48.856614,
+            "longitude": 2.352222
+        }
+    },
+    {
+        "dates": {
+            "from": "2018-01-01",
+            "to": "2018-06-30"
+        },
+        "country": {
+            "id": "SE",
+            "name": "Sweden"
+        },
+        "city": {
+            "name": "Stockholm",
+            "latitude": 59.33279,
+            "longitude": 18.06449
+        }
+    },
+    {
+        "dates": {
+            "from": "2018-07-01",
+            "to": "2018-12-31"
+        },
+        "country": {
+            "id": "NO",
+            "name": "Norway"
+        },
+        "city": {
+            "name": "Oslo",
+            "latitude": 59.913868,
+            "longitude": 10.752245
+        }
+    },
+    {
+        "dates": {
+            "from": "2019-01-01",
+            "to": "2019-01-01"
+        },
+        "country": {
+            "id": "FR",
+            "name": "France"
+        },
+        "city": {
+            "name": "Paris",
+            "latitude": 48.856614,
+            "longitude": 2.352222
+        }
+    },
+    {
+        "dates": {
+            "from": "2019-01-02",
+            "to": "2098-12-31"
+        },
+        "country": {
+            "id": "IS",
+            "name": "Iceland"
+        },
+        "city": {
+            "name": "Reykjavík",
+            "latitude": 64.126518,
+            "longitude": -21.817438
+        }
+    },
+    {
+        "dates": {
+            "from": "2099-01-01",
+            "to": "2099-01-01"
+        },
+        "country": {
+            "id": "FR",
+            "name": "France"
+        },
+        "city": {
+            "name": "Paris",
+            "latitude": 48.856614,
+            "longitude": 2.352222
+        }
+    },
+    {
+        "dates": {
+            "from": "2099-01-02"
+        },
+        "country": {
+            "id": "US",
+            "name": "United States"
+        },
+        "city": {
+            "name": "New York",
+            "latitude": 40.712776,
+            "longitude": -74.005974
+        }
+    }
+]

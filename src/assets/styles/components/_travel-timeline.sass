@@ -1,0 +1,60 @@
+.travel-timeline
+
+    // Arrow Tail
+    &::after
+        content: ""
+        position: absolute
+        width: 0
+        height: 0
+        left: 50%
+        margin-left: -8px
+        margin-top: -10px
+        border-width: 0 8px 10px 8px
+        border-style: solid
+        border-color: transparent
+        border-bottom-color: $background-color-1
+        z-index: 0
+
+    &-content
+        min-height: 200px
+        max-width: $max-width
+        padding: 60px 0 20px 0
+
+        // Arrow Head
+
+        &::before
+            content: ""
+            position: absolute
+            width: 0
+            height: 0
+            top: 0
+            left: 50%
+            margin-left: -20px
+            border-width: 0 20px 40px 20px
+            border-style: solid
+            border-color: transparent
+            border-bottom-color: inherit
+
+        // Arrow Body
+
+        &::after
+            content: ""
+            position: absolute
+            width: 16px
+            background-color: $color-1
+            top: 40px
+            bottom: 0
+            left: 50%
+            margin-left: -8px
+
+@media screen and (max-width: $media-max-width)
+  .travel-timeline
+    &::after
+      left: 48px
+
+    &-content
+        &::before
+            left: 48px
+
+        &::after
+            left: 48px
