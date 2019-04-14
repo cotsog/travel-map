@@ -3,6 +3,7 @@
     <app-navigation v-if="travels.length" :travelLinks="travelLinks"/>
     <world-map v-if="travels.length" :travels="travels"/>
     <travel-timeline v-if="travels.length" :travels="travels"/>
+    <b-alert class="m-2 mt-4" :show="error" variant="danger">{{error}}</b-alert>
     <app-footer/>
   </div>
 </template>
@@ -59,7 +60,7 @@ export default {
         this.travels = results;
       })
       .catch(error => {
-        console.log(error);
+        this.error = "Error while reading data.";
       });
   },
   methods: {
