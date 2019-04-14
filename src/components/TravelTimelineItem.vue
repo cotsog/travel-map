@@ -1,5 +1,6 @@
 <template>
-  <div :id="id" class="travel-timeline-item position-relative py-2 px-4" :class="classes.container">
+  <div class="travel-timeline-item position-relative py-2 px-4" :class="classes.container">
+    <div :id="id" class="travel-timeline-item-anchor">&nbsp;</div>
     <div
       class="travel-timeline-item-bubble rounded-circle flag-icon-background flag-icon-squared flag-icon-2x"
       :class="classes.bubble"

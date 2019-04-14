@@ -1,6 +1,6 @@
 {
   "name": "travel-map",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Interactive world map with travel history.",
   "author": "Benjamin Guibert <contact@bguibert.fr>",
   "license": "MIT",

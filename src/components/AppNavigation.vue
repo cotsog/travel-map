@@ -1,6 +1,6 @@
 <template>
   <nav class="navigation colors-2 fixed-top shadow">
-    <b-nav class="container justify-content-center" v-b-scrollspy="50">
+    <b-nav class="container justify-content-center" v-b-scrollspy>
       <b-nav-item href="#world-map" class="navigation-link" title="Map">
         <font-awesome-icon icon="map"/>
         <p class="navigation-link-label d-inline ml-2">Map</p>
