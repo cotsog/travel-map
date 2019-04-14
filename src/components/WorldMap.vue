@@ -1,6 +1,6 @@
 <template>
-  <div class="world-map">
-    <div id="world-map" class="world-map-content"></div>
+  <div id="world-map" class="world-map">
+    <div id="world-map-content" class="world-map-content"></div>
   </div>
 </template>
 
@@ -254,7 +254,7 @@ export default {
       });
     },
     createMap() {
-      const map = am4core.create("world-map", am4maps.MapChart);
+      const map = am4core.create("world-map-content", am4maps.MapChart);
       map.geodata = am4geodataWorldLow;
       map.projection = new am4maps.projections.Miller();
       map.seriesContainer.draggable = false;
