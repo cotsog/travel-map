@@ -1,0 +1,10 @@
+.world-map
+    padding-top: $navigation-height
+
+    &-content
+        width: 100vw
+        height: calc(100vh - #{$navigation-height})
+
+@media screen and (orientation: portrait) and (max-width: $media-max-width)
+    .world-map-content
+        height: 50vh
