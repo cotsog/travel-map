@@ -55,7 +55,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **[Benjamin Guibert](https://github.com/benjamin-guibert)** (<contact@bguibert.fr>) : Initial work
+* **[Benjamin Guibert](https://github.com/benjamin-guibert)** (<contact@bguibert.fr>): Initial work
 
 See also the list of [contributors][contributors-link] who participated in this project.
 
