@@ -1,17 +1,24 @@
 <template>
   <nav class="navigation colors-2 fixed-top shadow">
     <b-nav class="container justify-content-center" v-b-scrollspy>
-      <b-nav-item href="#world-map" class="navigation-link" title="Map">
+      <b-nav-item href="#world-map" class="navigation-link" @click="onClick" title="Map">
         <font-awesome-icon icon="map"/>
         <p class="navigation-link-label d-inline ml-2">Map</p>
       </b-nav-item>
-      <b-nav-item v-if="nextTravelLink" class="navigation-link" title="Next" :href="nextTravelLink">
+      <b-nav-item
+        v-if="nextTravelLink"
+        class="navigation-link"
+        @click="onClick"
+        title="Next"
+        :href="nextTravelLink"
+      >
         <font-awesome-icon icon="bookmark"/>
         <p class="navigation-link-label d-inline ml-2">Next</p>
       </b-nav-item>
       <b-nav-item
         v-if="currentTravelLink"
         class="navigation-link"
+        @click="onClick"
         title="Current"
         :href="currentTravelLink"
       >
@@ -21,13 +28,20 @@
       <b-nav-item
         v-if="visitedTravelLink"
         class="navigation-link"
+        @click="onClick"
         title="Visited"
         :href="visitedTravelLink"
       >
         <font-awesome-icon icon="check-circle"/>
         <p class="navigation-link-label d-inline ml-2">Visited</p>
       </b-nav-item>
-      <b-nav-item v-if="homeTravelLink" class="navigation-link" title="Home" :href="homeTravelLink">
+      <b-nav-item
+        v-if="homeTravelLink"
+        class="navigation-link"
+        @click="onClick"
+        title="Home"
+        :href="homeTravelLink"
+      >
         <font-awesome-icon icon="home"/>
         <p class="navigation-link-label d-inline ml-2">Home</p>
       </b-nav-item>
@@ -47,6 +61,9 @@ export default {
     travelLinks: {
       type: Object,
       required: true
+    },
+    onClick: {
+      type: Function
     }
   },
   computed: {
