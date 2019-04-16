@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="app">
-    <app-navigation v-if="travels.length" :travelLinks="travelLinks"/>
+    <app-navigation v-if="travels.length" :travelLinks="travelLinks" :on-click="onClickToScroll"/>
     <world-map v-if="travels.length" :travels="travels"/>
     <travel-timeline v-if="travels.length" :travels="travels"/>
     <b-alert class="m-2 mt-4" :show="error" variant="danger">{{error}}</b-alert>
@@ -10,6 +10,7 @@
 
 <script>
 import _ from "lodash";
+import JQuery from "jquery";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -21,6 +22,7 @@ import WorldMap from "./components/WorldMap.vue";
 import TravelTimeline from "./components/TravelTimeline.vue";
 
 library.add(fas, fab);
+const $ = JQuery;
 
 const travelsFilePath = "/travels.json";
 
@@ -119,6 +121,23 @@ export default {
           icon: "home"
         };
       }
+    },
+    onClickToScroll(event) {
+      event.preventDefault();
+
+      const element = $(
+        $(event.target)
+          .closest("a")
+          .attr("href")
+      );
+      $("body, html").animate(
+        {
+          scrollTop: element.offset().top
+        },
+        800
+      );
+
+      return false;
     }
   }
 };
